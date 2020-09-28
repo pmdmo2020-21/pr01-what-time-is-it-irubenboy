@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">What Time Is It</string>
+    <string name="lblDate">Date</string>
+    <string name="lblFecha">26/09/2020</string>
+    <string name="lblTime">Time</string>
+    <string name="lblHora">15:51</string>
 </resources>
