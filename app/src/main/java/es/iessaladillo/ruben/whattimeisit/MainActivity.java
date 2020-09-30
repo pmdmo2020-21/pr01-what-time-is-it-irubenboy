@@ -18,21 +18,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupView() {
-        String actualDate = dateNow();
-        String actualTime = timeNow();
         TextView lblFecha = ActivityCompat.requireViewById(this, R.id.lblFecha );
         TextView lblHora = ActivityCompat.requireViewById(this, R.id.lblHora);
+        Date date = new Date();
+        String actualDate= new SimpleDateFormat("dd/MM/yyyy").format(date);
+        String actualTime = new SimpleDateFormat("HH:mm").format(date);
         lblFecha.setText(actualDate);
         lblHora.setText(actualTime);
-    }
-
-    private String timeNow() {
-        return new SimpleDateFormat("HH:mm").format(new Date());
-    }
-
-    private String dateNow() {
-        Date now = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        return format.format(now);
     }
 }
